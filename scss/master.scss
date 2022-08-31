@@ -1,0 +1,232 @@
+$lightColor: #f7f0f5;
+$darkColor: #000000;
+$darkBlueColor: #0D2144;
+$grayColor: #3b3b3b;
+@import 'mixins';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+  /*border: 3px solid black;*/
+}
+ 
+
+
+.header{
+  background-image: url(../images/background.png);
+  background-position: top center;
+  height: 75vh;
+  background-size: cover;
+  text-align: center;
+  font-size: 150%;
+  @include screenS{
+    font-size: 100%;
+  }
+  .logo{
+    text-align: center;
+    img{
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+      animation-delay: .2s;
+      max-width:15%;
+      margin-top: 20vh;
+      @include screenM{
+        max-width:20%;
+      }
+      @include screenS{
+        max-width: 25%;
+        margin-top: 25vh;
+      }
+    }
+  }
+  h1{
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: .4s;
+    color: $lightColor;
+    padding: 0vh 5vh;
+  }
+  h2{
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: .6s;
+    color: $lightColor;
+  }
+}
+
+
+.about{
+  background-color: $grayColor;
+  height: auto;
+  text-align: center;
+  h1{
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: .8s;
+    color: $lightColor;
+    padding: 5vh 10vh;
+    @include screenS{
+      padding: 3vh 10vh;
+      font-size: 170%;
+    }
+  }
+  p{
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 1s;
+    color: $lightColor;
+    line-height: 1.75;
+    padding: 0vh 2%;
+    @include screenM{
+      font-size: 90%;
+    }
+    @include screenS{
+       font-size: 80%;
+    }
+  }
+}
+
+.slideshow{
+  background-color: $grayColor;
+  height:auto;
+  text-align: center;
+  padding: 3% 3%;
+  @include screenS{
+    padding: 2vh;
+  }
+  position: relative;
+  .images{
+    text-align: center;
+  }
+  img{
+    max-width: 100%;
+  }
+  .cycle-prev, .cycle-next{
+    position:absolute;
+    top: 30%;
+    background-color: rgba(0,0,0,.35);
+    color: #FFF;
+    padding: 1px 10px;
+    display: block;
+    cursor: pointer;
+    font-size:130%;
+    z-index: 1000;
+  }
+  .cycle-next{
+    right: 0;
+}
+
+}
+
+.contact{
+  background-color: $grayColor;
+  height: auto;
+  text-align: center;
+  h1{
+    color: $lightColor;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    @include screenS{
+      padding: 3vh 10vh;
+      font-size: 170%;
+    }
+  }
+  .media2{
+    background-color: $grayColor;
+    max-width: 50%;
+    float: left;
+    @include screenS{
+      max-width: 100%;
+      float: none;
+      text-align: center;
+    }
+    img{
+      max-width: 50%;
+      @include screenS{
+        max-width: 40%;
+      }
+
+    }
+    img:hover{
+      animation: fadeOut .25s forwards;
+    }
+  }
+
+  .media{
+    background-color: $grayColor;
+    max-width: 33.333333333334%;
+    float: left;
+    @include screenS{
+      max-width: 100%;
+      float: none;
+      text-align: center;
+    }
+    img{
+      max-width: 70%;
+      @include screenS{
+        max-width: 40%;
+      }
+
+    }
+    img:hover{
+      animation: fadeOut .25s forwards;
+    }
+  }
+}
+
+
+.exec{
+  background-color: $grayColor;
+  height: auto;
+  text-align: center;
+    color: $lightColor;
+
+  h1{
+    padding: 5vh 0vh;
+    @include screenS{
+      padding: 3vh 10vh;
+      font-size: 170%;
+    }
+  }
+  .profile{
+    background-color: $grayColor;
+    max-width: 33.333333333334%;
+    float: left;
+    @include screenS{
+      max-width: 50%;
+    }
+    img {
+      max-width: 70%;
+    }
+    h1{
+      padding: 0vh 0vh;
+      @include screenS{
+        padding: 0vh 0vh;
+        font-size: 150%;
+      }
+  }
+    h2{
+      @include screenS{
+        font-size:100%;
+      }
+    }
+}
+
+
+
+
+//ClearFix
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1;
+}
+}
