@@ -1,2 +1,2 @@
-# GDC_UIUC
+# GDC
 GDC Website
